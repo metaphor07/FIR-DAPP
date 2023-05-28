@@ -1,0 +1,108 @@
+.write {
+    padding-top: 70px;
+    background-color: #212121;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+
+  }
+  .writeWrapper{
+    padding: 0px 100px;
+    /* padding-right: 0; */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: max-content;
+  }
+  /* .writeImg {
+    margin-left: 150px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  } */
+  
+  .writeForm {
+    position: relative;
+    /* padding: 0px 100px; */
+  }
+  
+  .writeFormGroup {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .writeIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: rgb(129, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .writeInput {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+    background: transparent;
+    color: white;
+  }
+  
+  .writeInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+  }
+  
+  .writeInput:focus {
+    outline-style: none;
+  }
+  
+  .writeText {
+    width: 70vw;
+    height: 50vh;
+    font-family: inherit;
+    font-size: 20px;
+    /* max-height: 50vh; */
+    /* overflow: hidden; */
+  }
+  
+  .writeSubmit {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .proofSection{
+    display: flex;
+    align-items: center;
+  }
+  .proofTitle{
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .proofFile{
+    background-color: #0d0c0c;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 150px;
+   overflow: hidden;
+  }
