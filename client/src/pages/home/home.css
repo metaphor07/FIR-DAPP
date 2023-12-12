@@ -104,15 +104,18 @@
 
 .complain-card{
     /* border: 1px solid red; */
-    height: 430px;
-    width: 370px;
-    background-color: rgb(2, 88, 106);
+    height: 330px;
+    width: 300px;
+    background-color: rgb(17 24 25);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     border-radius: 10px;
     transition: 400ms;
+    -webkit-box-shadow: 10px 6px 19px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 6px 19px -9px rgba(0,0,0,0.75);
+box-shadow: 10px 6px 19px -9px rgba(0,0,0,0.75);
 }
 
 .complain-card:hover {
@@ -123,16 +126,14 @@
 .complain-card .card-img  {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    top: 0;
 }
 
 .complain-card .card-img img {
-    margin-top: 14px;
+    /* margin-top: 14px; */
     border-radius: 8px;
     width: 274px;
-    height: 274px;
+    height: 180px;
 }
 
 .card-wrapper {
@@ -166,6 +167,7 @@
     max-height: 77px;
     overflow: hidden;
     padding: 2px 25px;
+    font-size: 12px;
 }
 /* .text3{
     display: flex;

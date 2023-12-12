@@ -142,7 +142,7 @@ const CreateComplain = () => {
 
             <div className="writeFormGroup">
               <textarea
-                placeholder="Tell your story..."
+                placeholder="Write the incident properly... [***please note that, write about yourself(like address, phone no., etc) and any suspect(with their proper information) and also write incident date and place***]"
                 type="text"
                 className="writeInput writeText"
                 onChange={(e) => setDesc(e.target.value)}
@@ -176,7 +176,7 @@ const CreateComplain = () => {
               </div>
             </div>
             <button className="writeSubmit" type="submit">
-              Publish
+              Lodge
             </button>
           </form>
         </div>

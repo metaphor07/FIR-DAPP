@@ -106,7 +106,7 @@ const ComplainDetail = () => {
 
           <div className="singlePostInfo">
             <span className="singlePostAuthor">
-              Author:
+              Name:
               <b> {data?.name}</b>
             </span>
             <span className="singlePostDate">{daysLeft(data?.createdAt)}</span>

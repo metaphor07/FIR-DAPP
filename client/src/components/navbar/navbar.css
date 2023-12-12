@@ -15,6 +15,7 @@
     justify-content: space-between;
 }
 
+
 .navleft{
     flex: 1;
     display: flex;
@@ -54,8 +55,17 @@
 .navTitle{
     font-weight: bold;
     color: white;
+    /* border: 1px solid red; */
+    display: inline;
 }
-
+.logoImg{
+    margin-top: -15px;
+    border: 3px solid rgb(255, 255, 255);
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    margin-right: 3px;
+}
 .navright{
     flex: 1;
     display: flex;
@@ -70,6 +80,8 @@
     border: 1px solid white;
     padding: 8px 30px;
     background-color: green;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .notConnect{

@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../../context/Context";
 import { daysLeft } from "../../utils";
+import AllComplaints from "./AllComplaints";
 const Home = () => {
   const { contract, address } = useContext(Context);
   const navigate = useNavigate();
-  const projects = [1, 2, 3, 4, 5];
+  // const projects = [1, 2, 3, 4, 5];
   const [complains, setComplains] = useState();
-
+  const location = useLocation().state?.match;
+  console.log("location: ", location);
   useEffect(() => {
     const getAllComplain = async () => {
       try {
@@ -63,8 +65,8 @@ const Home = () => {
       </div>
 
       {/* All Campaigns */}
-      <section className="complain-section">
-        <h1 className="title">All Complains ({complains?.length}) </h1>
+      {/* <section className="complain-section">
+        <h1 className="title">All Complaints ({complains?.length}) </h1>
         {contract && address ? (
           <div className="card-wrapper">
             {complains?.map((complain, i) => {
@@ -76,7 +78,7 @@ const Home = () => {
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <div className="complain-card">
-                    <div className="card-img" style={{ width: "90%" }}>
+                    <div className="card-img">
                       {complain?.imgProof ? (
                         <img
                           src={`https://gateway.pinata.cloud/ipfs/${complain?.imgProof}`}
@@ -95,14 +97,14 @@ const Home = () => {
                       <div className="text1">
                         <span
                           style={{
-                            fontSize: "22px",
+                            fontSize: "18px",
                             fontWeight: "400",
                             color: "white",
                           }}
                         >
                           {complain?.name}
                         </span>
-                        <span style={{ color: "white" }}>
+                        <span style={{ color: "white", fontSize: "14px" }}>
                           {daysLeft(complain?.createdAt)}
                         </span>
                       </div>
@@ -112,7 +114,7 @@ const Home = () => {
                       <div className="text3">
                         <span
                           style={{
-                            fontSize: "12px",
+                            fontSize: "10px",
                             width: "230px",
                             overflow: "hidden",
                             color: "white",
@@ -123,9 +125,11 @@ const Home = () => {
                         {complain?.solved ? (
                           <span
                             style={{
-                              backgroundColor: "green",
-                              color: "white",
+                              // backgroundColor: "green",
+                              color: "green",
                               padding: "2px 3px",
+                              fontSize: "10px",
+                              fontWeight: "bold",
                             }}
                           >
                             solved
@@ -133,9 +137,11 @@ const Home = () => {
                         ) : (
                           <span
                             style={{
-                              backgroundColor: "red",
-                              color: "white",
+                              // backgroundColor: "red",
+                              color: "red",
                               padding: "2px 3px",
+                              fontSize: "10px",
+                              fontWeight: "bold",
                             }}
                           >
                             Not solved
@@ -149,9 +155,23 @@ const Home = () => {
             })}
           </div>
         ) : (
-          "No complains Yet!"
+          "No complaints Yet!"
         )}
-      </section>
+      </section> */}
+
+      {location ? (
+        <AllComplaints
+          contract={contract}
+          address={address}
+          complains={location}
+        />
+      ) : (
+        <AllComplaints
+          contract={contract}
+          address={address}
+          complains={complains}
+        />
+      )}
     </div>
   );
 };
