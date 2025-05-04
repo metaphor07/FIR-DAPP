@@ -21,3 +21,18 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 # metamask account look like
 ![image](https://github.com/user-attachments/assets/486eb6b0-39d3-4357-a184-5cd9d7de9cb8)
 
+# Acknowledgements
+
+Decentralize Portfolio is built using the following technologies:
+
+Solidity - The smart contract programming language for Ethereum.
+
+React - A JavaScript library for building user interfaces.
+
+Hardhat - Development environment for Ethereum smart contracts.
+
+IPFS - Decentralized storage for portfolio data.
+
+Web3.js - JavaScript library for interacting with Ethereum.
+
+Metamask - A crypto wallet
